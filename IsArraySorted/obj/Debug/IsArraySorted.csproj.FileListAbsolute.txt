@@ -1,0 +1,6 @@
+c:\users\student\documents\visual studio 2015\Projects\IsArraySorted\bin\Debug\IsArraySorted.exe.config
+c:\users\student\documents\visual studio 2015\Projects\IsArraySorted\bin\Debug\IsArraySorted.exe
+c:\users\student\documents\visual studio 2015\Projects\IsArraySorted\bin\Debug\IsArraySorted.pdb
+c:\users\student\documents\visual studio 2015\Projects\IsArraySorted\obj\Debug\IsArraySorted.csprojResolveAssemblyReference.cache
+c:\users\student\documents\visual studio 2015\Projects\IsArraySorted\obj\Debug\IsArraySorted.exe
+c:\users\student\documents\visual studio 2015\Projects\IsArraySorted\obj\Debug\IsArraySorted.pdb
