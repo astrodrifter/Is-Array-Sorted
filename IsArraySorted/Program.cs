@@ -1,37 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace IsArraySorted {
     class Program {
         static void Main(string[] args) {
-            int[] numbers = { 5, 4, 3, 2, 1 };
-            bool result = IsArraySorted(numbers);
-            DisplayResult(result);
+            // enter an array called numbers here
+            int[] numbers = { 8, 2, 3, 4, 6 }; // this example will give False
+            bool result = true;
+            bool answer = IsArraySorted(numbers, result);
+            DisplayResult(answer);
             Console.ReadKey();
-
-
         }
-        public static bool IsArraySorted(int[] numbers) {
-            int length = numbers.Length;
-            for(int i = 0; i < length; i++) {
-                if (numbers[i] < numbers[i+1] && numbers[i] > numbers[i+2]) {
-                    Console.WriteLine("numbers is not sorted #1");
-                    return false;
-                } else if (numbers[i] > numbers[i+1] && numbers[i] < numbers[i+2]) {
-                    Console.WriteLine("numbers is not sorted #2");
-                    return false;
-                }              
+        /// <summary>
+        /// Take an array called numbers, returns true if sorted,
+        /// ascending or descending and false otherwise.
+        /// </summary>
+        /// <param name="numbers"></param>
+        /// <param name="result"></param>
+        /// <returns></returns>
+        public static bool IsArraySorted(int[] numbers, bool result) {
+            int length = numbers.Length;          
+            for (int i = 1; i < length; i++) {
+
+                // accending
+                if (numbers[i - 1] < numbers[numbers.Length-1]) {
+                    if (numbers[i - 1] < numbers[i]) {
+                         result = true;
+                    }
+               
+                //decending
+                } else if (numbers[i - 1] > numbers[numbers.Length-1]) {
+                    if (numbers[i - 1] > numbers[i]) {
+                        result = true;
+                    }
+                }
+                result = false;           
             }
-            return true;
-        }
-        public static bool DisplayResult(bool result) {
-            if(result == true) {
-                Console.WriteLine("The array is sorted");
+            return result;
+        }// dispaly result
+        public static void DisplayResult(bool answer) { 
+            if(answer == true) {
+                Console.WriteLine("True! The array is sorted");
+            } else {
+                Console.WriteLine("False! The array is not sorted");
             }
-            return true;
+            
         }
     }
 }
